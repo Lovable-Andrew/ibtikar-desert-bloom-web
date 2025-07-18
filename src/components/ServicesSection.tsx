@@ -14,6 +14,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import greenhouseTypesImage from "@/assets/greenhouse-types.jpg";
 import researchLabImage from "@/assets/research-lab.jpg";
+import trainingProgramsImage from "@/assets/training-programs.jpg";
+import coworkingSpaceImage from "@/assets/coworking-space.jpg";
 
 const ServicesSection = () => {
   const facilities = [
@@ -51,13 +53,13 @@ const ServicesSection = () => {
       icon: GraduationCap,
       title: "Training Programs",
       description: "Comprehensive educational programs for farmers, researchers, and agri-tech professionals.",
-      image: null
+      image: trainingProgramsImage
     },
     {
       icon: Users,
       title: "Co-working Spaces",
       description: "Collaborative workspaces for startups, researchers, and industry professionals to innovate together.",
-      image: null
+      image: coworkingSpaceImage
     }
   ];
 
