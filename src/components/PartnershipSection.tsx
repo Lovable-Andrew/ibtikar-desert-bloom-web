@@ -10,6 +10,9 @@ import {
   Target,
   Zap
 } from "lucide-react";
+import topianLogo from "@/assets/topian-logo.png";
+import saudiGreenhousesLogo from "@/assets/saudi-greenhouses-logo.png";
+import universityTabukLogo from "@/assets/university-tabuk-logo.png";
 
 const PartnershipSection = () => {
   const partnershipTypes = [
@@ -40,9 +43,21 @@ const PartnershipSection = () => {
   ];
 
   const partnerLogos = [
-    { name: "Topian (NEOM)", description: "Food Sector Innovation" },
-    { name: "Saudi Greenhouses", description: "Industry Expertise" },
-    { name: "University of Tabuk", description: "Research Excellence" }
+    { 
+      name: "Topian, the NEOM Food Company", 
+      description: "Sustainable Food Innovation",
+      logo: topianLogo
+    },
+    { 
+      name: "Saudi Greenhouses Management and Agri Marketing Co.", 
+      description: "Horticultural Excellence",
+      logo: saudiGreenhousesLogo
+    },
+    { 
+      name: "University of Tabuk", 
+      description: "Research & Academia",
+      logo: universityTabukLogo
+    }
   ];
 
   return (
@@ -117,12 +132,14 @@ const PartnershipSection = () => {
             {partnerLogos.map((partner, index) => (
               <Card key={index} className="nature-card text-center">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <div className="text-white font-bold text-xl">
-                      {partner.name.split(' ').map(word => word[0]).join('')}
-                    </div>
+                  <div className="w-24 h-24 bg-white rounded-lg flex items-center justify-center mx-auto mb-4 p-4 shadow-sm">
+                    <img 
+                      src={partner.logo} 
+                      alt={`${partner.name} logo`}
+                      className="max-w-full max-h-full object-contain"
+                    />
                   </div>
-                  <h4 className="text-xl font-semibold mb-2">{partner.name}</h4>
+                  <h4 className="text-lg font-semibold mb-2">{partner.name}</h4>
                   <p className="text-muted-foreground">{partner.description}</p>
                 </CardContent>
               </Card>
