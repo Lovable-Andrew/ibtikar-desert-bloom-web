@@ -11,6 +11,8 @@ import {
   Zap
 } from "lucide-react";
 import universityTabukLogo from "@/assets/university-tabuk-logo.png";
+import alrasheedLogo from "@/assets/alrasheed-logo.png";
+import topianLogo from "@/assets/topian-logo.png";
 
 const PartnershipSection = () => {
   const partnershipTypes = [
@@ -43,11 +45,11 @@ const PartnershipSection = () => {
   const partnerLogos = [
     { 
       name: "Topian, the NEOM Food Company", 
-      logo: "/lovable-uploads/ed28c87d-4958-4a93-acae-b2ff410669dc.png"
+      logo: topianLogo
     },
     { 
       name: "Saudi Greenhouses Management and Agri Marketing Co.", 
-      logo: "/lovable-uploads/88986c41-edaa-4f8c-b60f-a7271c1fc57e.png"
+      logo: alrasheedLogo
     },
     { 
       name: "University of Tabuk", 
