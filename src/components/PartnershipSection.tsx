@@ -10,8 +10,6 @@ import {
   Target,
   Zap
 } from "lucide-react";
-import topianLogo from "@/assets/topian-logo.png";
-import saudiGreenhousesLogo from "@/assets/saudi-greenhouses-logo.png";
 import universityTabukLogo from "@/assets/university-tabuk-logo.png";
 
 const PartnershipSection = () => {
@@ -45,17 +43,14 @@ const PartnershipSection = () => {
   const partnerLogos = [
     { 
       name: "Topian, the NEOM Food Company", 
-      description: "Sustainable Food Innovation",
-      logo: topianLogo
+      logo: "/lovable-uploads/ed28c87d-4958-4a93-acae-b2ff410669dc.png"
     },
     { 
       name: "Saudi Greenhouses Management and Agri Marketing Co.", 
-      description: "Horticultural Excellence",
-      logo: saudiGreenhousesLogo
+      logo: "/lovable-uploads/88986c41-edaa-4f8c-b60f-a7271c1fc57e.png"
     },
     { 
       name: "University of Tabuk", 
-      description: "Research & Academia",
       logo: universityTabukLogo
     }
   ];
@@ -132,15 +127,13 @@ const PartnershipSection = () => {
             {partnerLogos.map((partner, index) => (
               <Card key={index} className="nature-card text-center">
                 <CardContent className="p-8">
-                  <div className="w-24 h-24 bg-white rounded-lg flex items-center justify-center mx-auto mb-4 p-4 shadow-sm">
+                  <div className="w-32 h-32 bg-white rounded-lg flex items-center justify-center mx-auto shadow-sm">
                     <img 
                       src={partner.logo} 
                       alt={`${partner.name} logo`}
-                      className="max-w-full max-h-full object-contain"
+                      className="max-w-full max-h-full object-contain p-4"
                     />
                   </div>
-                  <h4 className="text-lg font-semibold mb-2">{partner.name}</h4>
-                  <p className="text-muted-foreground">{partner.description}</p>
                 </CardContent>
               </Card>
             ))}
