@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { sendContactToStackby } from "@/lib/stackby";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { 
@@ -48,7 +50,7 @@ const CTASection = () => {
   return (
     <>
       {/* Main CTA Section */}
-      <section className="section-padding bg-background">
+      <section id="contact" className="section-padding bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -60,39 +62,14 @@ const CTASection = () => {
             </p>
           </div>
 
-          {/* CTA Cards */}
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
-            {ctaOptions.map((option, index) => (
-              <Card key={index} className="nature-card group cursor-pointer hover:scale-105 transition-all duration-300">
-                <CardContent className="p-8 text-center">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${option.gradient} rounded-full flex items-center justify-center mx-auto mb-6`}>
-                    <option.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">{option.title}</h3>
-                  <p className="text-muted-foreground mb-6">{option.description}</p>
-                  <Button className="btn-nature group-hover:shadow-elegant">
-                    {option.action}
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+          {/* Scroll Down Button */}
+          <div className="flex justify-center mb-20">
+            <a href="#contact" aria-label="Scroll to Contact Form" className="btn-nature flex items-center gap-2 animate-bounce">
+              <span>Contact Us</span>
+              <ArrowRight className="h-5 w-5" />
+            </a>
           </div>
 
-          {/* Benefits Grid */}
-          <Card className="nature-card bg-muted/30">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-center mb-8">Why Choose Ibtikar?</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
-                    <span>{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
@@ -141,30 +118,19 @@ const CTASection = () => {
               </div>
             </div>
 
-            {/* Contact Form */}
-            <Card className="nature-card">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <Input placeholder="First Name" />
-                    <Input placeholder="Last Name" />
-                  </div>
-                  <Input placeholder="Email Address" type="email" />
-                  <Input placeholder="Organization" />
-                  <Input placeholder="Phone Number" />
-                  <textarea 
-                    className="w-full p-3 border border-input rounded-md resize-none"
-                    rows={4}
-                    placeholder="Tell us about your project or inquiry..."
-                  ></textarea>
-                  <Button className="btn-nature w-full">
-                    Send Message
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+            {/* Contact Form - Stackby Embed */}
+            <div className="nature-card p-0 overflow-hidden">
+              <iframe
+                className="stackby-embed"
+                src="https://stackby.com/form/frshr17534818776559d669c?"
+                frameBorder="0"
+                width="100%"
+                height="533"
+                title="Contact Form"
+                style={{ border: 0, minHeight: 533, width: '100%' }}
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>

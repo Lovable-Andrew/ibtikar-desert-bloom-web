@@ -58,7 +58,7 @@ const PartnershipSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-gradient-sand">
+    <section id="partnership" className="section-padding bg-gradient-sand">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -103,7 +103,9 @@ const PartnershipSection = () => {
           <CardContent className="p-12 text-center">
             <div className="max-w-3xl mx-auto">
               <Handshake className="h-16 w-16 mx-auto mb-6 opacity-90" />
-              <h3 className="text-3xl font-bold mb-4">Ready to Collaborate?</h3>
+              <h3 className="text-3xl font-bold mb-4">
+                <span className="badge-nature">Ready to Collaborate?</span>
+              </h3>
               <p className="text-lg opacity-90 mb-8">
                 Whether you're a startup with groundbreaking technology, a research institution 
                 seeking validation, or an investor looking for sustainable opportunities, 
@@ -114,7 +116,7 @@ const PartnershipSection = () => {
                   Schedule a Visit
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                <Button size="lg" className="btn-inverse">
                   Start a Trial
                 </Button>
               </div>

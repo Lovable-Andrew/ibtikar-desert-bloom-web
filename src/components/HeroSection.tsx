@@ -1,10 +1,16 @@
+
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Sprout, Droplets, Sun } from "lucide-react";
 import heroImage from "@/assets/hero-greenhouse.jpg";
+import ibtikarLogo from "@/assets/ibtikar-logo.png";
 
 const HeroSection = () => {
   return (
     <section className="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+      {/* Branded Logo */}
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 z-20">
+        <img src={ibtikarLogo} alt="Ibtikar Logo" className="logo" style={{maxHeight: 80, width: 'auto'}} />
+      </div>
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -26,7 +32,7 @@ const HeroSection = () => {
         <Sun size={50} />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 pt-32">
         <div className="max-w-4xl">
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 fade-in-up">
@@ -51,13 +57,13 @@ const HeroSection = () => {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 fade-in-up stagger-3">
-            <Button size="lg" className="btn-nature group">
+            <a href="#services" aria-label="Explore Our Facilities" className="btn-nature group">
               Explore Our Facilities
               <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline" size="lg" className="btn-outline-nature">
+            </a>
+            <a href="#partnership" aria-label="Partner With Us" className="btn-outline-nature">
               Partner With Us
-            </Button>
+            </a>
           </div>
 
           {/* Stats */}

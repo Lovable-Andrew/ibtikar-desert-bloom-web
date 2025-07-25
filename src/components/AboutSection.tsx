@@ -21,7 +21,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-gradient-sand">
+    <section id="about" className="section-padding bg-gradient-sand">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

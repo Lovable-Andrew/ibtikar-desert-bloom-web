@@ -8,52 +8,55 @@
 
 @layer base {
   :root {
-    /* Core Nature Palette */
-    --background: 35 15% 97%;
-    --foreground: 160 15% 15%;
+    /* Ibtikar Brand Colors */
+    --background: 90 21% 95%; /* Sage Grey (#DDE0CE) */
+    --foreground: 234 11% 38%; /* Slate Grey (#585A6A) for body text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 160 15% 15%;
+    --card: 0 0% 100%; /* Clean White */
+    --card-foreground: 234 11% 38%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 160 15% 15%;
+    --popover-foreground: 234 11% 38%;
 
-    /* Desert Sage Green - Primary */
-    --primary: 140 35% 25%;
-    --primary-foreground: 0 0% 98%;
-    --primary-light: 140 40% 45%;
-    --primary-glow: 140 50% 65%;
+    /* Forest Green - Primary */
+    --primary: 168 100% 15%; /* #004D3C Forest Green */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    --primary-light: 168 100% 25%; /* slightly lighter Forest Green */
+    --primary-glow: 142 100% 35%;
 
-    /* Sand Neutral - Secondary */
-    --secondary: 35 25% 85%;
-    --secondary-foreground: 160 15% 15%;
+    /* Sage Grey - Secondary */
+    --secondary: 75 21% 85%; /* #DDE0CE */
+    --secondary-foreground: 234 11% 38%;
 
-    /* Warm Sand - Muted */
-    --muted: 40 20% 92%;
-    --muted-foreground: 160 10% 45%;
+    /* Muted (Slate Grey) */
+    --muted: 234 11% 80%; /* Lighter Slate Grey for backgrounds */
+    --muted-foreground: 234 11% 38%; /* Slate Grey for muted text */
 
     /* Fresh Green - Accent */
-    --accent: 120 50% 50%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 142 100% 35%; /* #00B140 Fresh Green */
+    --accent-foreground: 0 0% 100%;
+
+    /* Agri Blue */
+    --agri-blue: 213 100% 32%; /* #0054A6 */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 15% 85%;
-    --input: 35 15% 85%;
-    --ring: 140 35% 25%;
+    --border: 90 21% 80%; /* Sage Grey border */
+    --input: 90 21% 80%;
+    --ring: 168 100% 15%;
 
     --radius: 0.75rem;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-nature: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary-glow)));
-    --gradient-sand: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
+    --gradient-primary: linear-gradient(135deg, #004D3C 0%, #00B140 100%);
+    --gradient-nature: linear-gradient(135deg, #00B140 0%, #0054A6 100%);
+    --gradient-sand: linear-gradient(180deg, #DDE0CE 0%, #FFFFFF 100%);
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.1);
-    --shadow-nature: 0 8px 32px -8px hsl(var(--accent) / 0.2);
-    --shadow-elegant: 0 12px 40px -12px hsl(var(--primary) / 0.15);
+    --shadow-soft: 0 4px 20px -4px #004D3C22;
+    --shadow-nature: 0 8px 32px -8px #00B14033;
+    --shadow-elegant: 0 12px 40px -12px #004D3C22;
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -99,7 +102,17 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #004D3C; /* Forest Green headings */
+    font-weight: 700;
+  }
+
+  .btn, .btn-nature, .btn-outline-nature {
+    font-weight: 600;
+    letter-spacing: 0.01em;
   }
 
   /* Smooth scrolling */
@@ -112,19 +125,44 @@
   /* Hero gradient background */
   .hero-gradient {
     background: var(--gradient-sand);
+    /* Add a subtle overlay for depth */
+    position: relative;
   }
 
   /* Nature-inspired button variants */
+
+
   .btn-nature {
-    @apply bg-gradient-to-r from-accent to-primary-glow text-white font-medium px-6 py-3 rounded-lg;
+    @apply bg-gradient-to-r from-accent to-[#0054A6] text-white px-7 py-2 rounded-xl;
     @apply shadow-nature hover:shadow-elegant;
     @apply transition-all duration-300 hover:scale-105;
+    border: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.12);
   }
 
+  /* For use on light backgrounds: Forest Green text, white bg, green border */
+  .btn-inverse {
+    @apply bg-white text-[#004D3C] border-2 border-[#004D3C] px-7 py-3 rounded-xl;
+    @apply hover:bg-[#004D3C] hover:text-white transition-all duration-300;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+
   .btn-outline-nature {
-    @apply border-2 border-primary text-primary bg-transparent font-medium px-6 py-3 rounded-lg;
-    @apply hover:bg-primary hover:text-primary-foreground;
+    @apply border-2 border-primary text-primary bg-white px-7 py-2 rounded-xl;
+    @apply hover:bg-primary hover:text-white;
     @apply transition-all duration-300;
+    text-shadow: none;
+  }
+
+  /* High-contrast badge for green on white or white on green */
+  .badge-nature {
+    @apply inline-block px-4 py-2 rounded-full font-semibold text-xs;
+    background: #004D3C;
+    color: #fff;
+    border: 1.5px solid #00B140;
+    letter-spacing: 0.04em;
   }
 
   /* Section styling */
@@ -133,9 +171,12 @@
   }
 
   /* Card with nature shadow */
+
   .nature-card {
-    @apply bg-card rounded-xl p-6 shadow-soft;
+    @apply bg-card rounded-2xl p-7 shadow-soft;
     @apply hover:shadow-nature transition-all duration-300;
+    border: 1.5px solid hsl(var(--border));
+    color: #004D3C;
   }
 
   /* Floating animation */
@@ -149,10 +190,12 @@
   }
 
   /* Fade in up animation */
+
   .fade-in-up {
     opacity: 0;
     transform: translateY(30px);
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 0.8s cubic-bezier(0.4,0,0.2,1) forwards;
+    color: #004D3C;
   }
 
   @keyframes fadeInUp {

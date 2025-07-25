@@ -1,42 +1,76 @@
+
 #root {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 2.5rem 1.5rem;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #f7f8fa;
+  color: #1a2a36;
+  min-height: 100vh;
+  text-align: left;
 }
+
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  height: 64px;
+  width: auto;
+  display: block;
+  margin: 0 auto 2rem auto;
+  filter: drop-shadow(0 2px 12px rgba(0,0,0,0.08));
+  transition: transform 0.2s;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  transform: scale(1.04) rotate(-2deg);
+  filter: drop-shadow(0 4px 24px rgba(0,0,0,0.12));
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+/* Remove spinning animation for a more professional look */
+
 
 .card {
-  padding: 2em;
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  padding: 2.5em 2em;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 6px 32px rgba(0,0,0,0.10);
 }
 
+
 .read-the-docs {
-  color: #888;
+  color: #6b7a8f;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+  background: #1a7f5a;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75em 2em;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: #145c3c;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  color: #1a2a36;
+}
+
+/* Utility */
+.center {
+  text-align: center;
 }
