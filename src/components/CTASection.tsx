@@ -18,33 +18,33 @@ const CTASection = () => {
   const ctaOptions = [
     {
       icon: Calendar,
-      title: "Book a Visit",
-      description: "Tour our world-class facilities and see innovation in action",
-      action: "Schedule Tour",
+      title: "Join Planning Process",
+      description: "Participate in our facility design and program development as a founding stakeholder",
+      action: "Get Involved",
       gradient: "from-accent to-primary-glow"
     },
     {
       icon: Beaker,
-      title: "Start a Trial",
-      description: "Test your agricultural solutions in our controlled environments",
-      action: "Begin Trial",
+      title: "Reserve Trial Space",
+      description: "Secure priority access to our controlled environments when we launch in 2026",
+      action: "Reserve Access",
       gradient: "from-primary to-primary-light"
     },
     {
       icon: Handshake,
-      title: "Partner With Us",
-      description: "Join our ecosystem of innovators and researchers",
-      action: "Explore Partnership",
+      title: "Become a Founding Partner",
+      description: "Shape the future of agricultural innovation as a charter member of our ecosystem",
+      action: "Partner Early",
       gradient: "from-primary-light to-accent"
     }
   ];
 
   const benefits = [
-    "Access to cutting-edge facilities",
-    "Expert guidance and mentorship",
-    "Collaborative research opportunities",
-    "Market validation and scaling support",
-    "Vision 2030 alignment opportunities"
+    "Priority access to launch facilities",
+    "Input on facility design and programs",
+    "Founding member networking opportunities",
+    "Early adopter pricing and benefits",
+    "Vision 2030 alignment support from day one"
   ];
 
   return (
@@ -93,26 +93,6 @@ const CTASection = () => {
                   <div>
                     <h4 className="font-semibold">Location</h4>
                     <p className="text-muted-foreground">Tabuk, Saudi Arabia</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mr-4">
-                    <Mail className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Email</h4>
-                    <p className="text-muted-foreground">info@ibtikar.sa</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-primary-light to-accent rounded-lg flex items-center justify-center mr-4">
-                    <Phone className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Phone</h4>
-                    <p className="text-muted-foreground">+966 XXX XXX XXXX</p>
                   </div>
                 </div>
               </div>
