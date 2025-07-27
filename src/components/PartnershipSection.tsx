@@ -1,14 +1,10 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Beaker, 
   TrendingUp, 
   Users, 
   Lightbulb, 
-  ArrowRight, 
-  Handshake,
-  Target,
-  Zap
+  Target
 } from "lucide-react";
 import universityTabukLogo from "@/assets/university-tabuk-logo.png";
 import alrasheedLogo from "@/assets/alrasheed-logo.png";
@@ -66,7 +62,7 @@ const PartnershipSection = () => {
             Partner <span className="text-primary">With Us</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Join forces with Ibtikar to accelerate agricultural innovation and 
+            Join forces with Ibtikar as an anchor partner to accelerate agricultural innovation and 
             create sustainable solutions for global food security challenges.
           </p>
         </div>
@@ -98,34 +94,8 @@ const PartnershipSection = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <Card className="nature-card bg-primary text-primary-foreground mb-20">
-          <CardContent className="p-12 text-center">
-            <div className="max-w-3xl mx-auto">
-              <Handshake className="h-16 w-16 mx-auto mb-6 opacity-90" />
-              <h3 className="text-3xl font-bold mb-4">
-                <span className="badge-nature">Ready to Collaborate?</span>
-              </h3>
-              <p className="text-lg opacity-90 mb-8">
-                Whether you're a startup with groundbreaking technology, a research institution 
-                seeking validation, or an investor looking for sustainable opportunities, 
-                we have the right partnership model for you.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="group">
-                  Schedule a Visit
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button size="lg" className="btn-inverse">
-                  Start a Trial
-                </Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
         {/* Founding Partners */}
-        <div>
+        <div className="mb-20">
           <h3 className="text-3xl font-bold text-center mb-12">Our Founding Partners</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {partnerLogos.map((partner, index) => (
@@ -145,7 +115,7 @@ const PartnershipSection = () => {
         </div>
 
         {/* Vision 2030 Alignment */}
-        <Card className="nature-card mt-20 bg-accent text-accent-foreground">
+        <Card className="nature-card bg-accent text-accent-foreground">
           <CardContent className="p-8 text-center">
             <Target className="h-12 w-12 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4">Aligned with Saudi Vision 2030</h3>

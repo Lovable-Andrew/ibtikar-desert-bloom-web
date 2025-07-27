@@ -48,73 +48,71 @@ const CTASection = () => {
   ];
 
   return (
-    <>
-      {/* Main CTA Section */}
-      <section id="contact" className="section-padding bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to <span className="text-primary">Innovate</span>?
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Take the next step in agricultural innovation. Whether you're looking to 
-              research, trial, or scale your solutions, we're here to support your journey.
-            </p>
-          </div>
-
-          {/* Scroll Down Button */}
-          <div className="flex justify-center mb-20">
-            <a href="#contact" aria-label="Scroll to Contact Form" className="btn-nature flex items-center gap-2 animate-bounce">
-              <span>Contact Us</span>
-              <ArrowRight className="h-5 w-5" />
-            </a>
-          </div>
-
+    <section id="contact" className="section-padding bg-gradient-sand">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Get <span className="text-primary">Started</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Ready to start your journey with Ibtikar? Contact us today to discuss 
+            how we can support your agricultural innovation goals.
+          </p>
         </div>
-      </section>
 
-      {/* Contact Section */}
-      <section className="section-padding bg-gradient-sand">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Contact Info */}
-            <div>
-              <h2 className="text-4xl font-bold mb-6">Get in Touch</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Ready to start your journey with Ibtikar? Contact us today to discuss 
-                how we can support your agricultural innovation goals.
-              </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-nature rounded-lg flex items-center justify-center mr-4">
-                    <MapPin className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Location</h4>
-                    <p className="text-muted-foreground">Tabuk, Saudi Arabia</p>
-                  </div>
+        {/* Contact Section */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-3xl font-bold mb-6">Contact Information</h3>
+            <p className="text-lg text-muted-foreground mb-8">
+              We're here to help you navigate your agricultural innovation journey. 
+              Whether you're interested in partnerships, trials, or learning more about our programs.
+            </p>
+            
+            <div className="space-y-6">
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gradient-nature rounded-lg flex items-center justify-center mr-4">
+                  <MapPin className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-semibold">Location</h4>
+                  <p className="text-muted-foreground">Tabuk, Saudi Arabia</p>
                 </div>
               </div>
             </div>
 
-            {/* Contact Form - Stackby Embed */}
-            <div className="nature-card p-0 overflow-hidden">
-              <iframe
-                className="stackby-embed"
-                src="https://stackby.com/form/frshr17534818776559d669c?"
-                frameBorder="0"
-                width="100%"
-                height="533"
-                title="Contact Form"
-                style={{ border: 0, minHeight: 533, width: '100%' }}
-                allowFullScreen
-              ></iframe>
+            {/* Benefits */}
+            <div className="mt-8">
+              <h4 className="font-semibold mb-4">Why Partner With Ibtikar?</h4>
+              <div className="space-y-3">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span className="text-sm">{benefit}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
+
+          {/* Contact Form - Stackby Embed */}
+          <div className="nature-card p-0 overflow-hidden">
+            <iframe
+              className="stackby-embed"
+              src="https://stackby.com/form/frshr17534818776559d669c?"
+              frameBorder="0"
+              width="100%"
+              height="533"
+              title="Contact Form"
+              style={{ border: 0, minHeight: 533, width: '100%' }}
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
