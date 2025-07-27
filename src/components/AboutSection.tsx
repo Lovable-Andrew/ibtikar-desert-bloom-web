@@ -46,9 +46,9 @@ const AboutSection = () => {
                 <h3 className="text-2xl font-bold">Our Mission</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                To accelerate the development and deployment of climate-smart agricultural 
-                solutions that maximize food security while minimizing environmental impact 
-                in arid and semi-arid regions.
+                To establish and operate a world-class agricultural innovation center that will 
+                accelerate the development and deployment of climate-smart solutions, maximizing 
+                food security while minimizing environmental impact in arid and semi-arid regions.
               </p>
             </CardContent>
           </Card>

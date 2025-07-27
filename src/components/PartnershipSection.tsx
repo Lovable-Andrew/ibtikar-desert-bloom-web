@@ -18,27 +18,27 @@ const PartnershipSection = () => {
   const partnershipTypes = [
     {
       icon: Beaker,
-      title: "Research Trials",
-      description: "Conduct cutting-edge research in our controlled environment facilities with access to state-of-the-art equipment and expert guidance.",
-      benefits: ["Access to high-tech greenhouses", "Expert consultation", "Data analytics support", "Publication opportunities"]
+      title: "Research Planning Partnership",
+      description: "Collaborate with us in designing cutting-edge research programs and helping define our facility specifications.",
+      benefits: ["Input on facility design", "Program co-development", "Priority research slots", "Joint funding opportunities"]
     },
     {
       icon: TrendingUp,
-      title: "Commercial Trials",
-      description: "Test and validate your agricultural technologies in real-world conditions before market deployment.",
-      benefits: ["Market validation", "Scale testing", "Performance metrics", "Regulatory compliance support"]
+      title: "Launch Partner Program",
+      description: "Secure priority access and preferential terms as a founding user of our future facilities.",
+      benefits: ["Priority facility access", "Founder pricing", "Custom program design", "Market validation support"]
     },
     {
       icon: Lightbulb,
-      title: "Innovation Incubation",
-      description: "Join our innovation program to develop breakthrough solutions for arid agriculture challenges.",
-      benefits: ["Mentorship programs", "Funding opportunities", "Technical resources", "Market access"]
+      title: "Innovation Co-Development",
+      description: "Work with us now to develop breakthrough solutions that will be tested in our facilities upon launch.",
+      benefits: ["Joint IP development", "Funding co-development", "Technology validation", "Market access planning"]
     },
     {
       icon: Users,
-      title: "Capability Building",
-      description: "Enhance your team's skills through our comprehensive training programs and knowledge transfer initiatives.",
-      benefits: ["Expert training", "Certification programs", "Hands-on workshops", "Continuous learning"]
+      title: "Early Adopter Training",
+      description: "Get ahead of the curve with early access to our methodology and prepare your team for launch.",
+      benefits: ["Pre-launch training", "Methodology access", "Team preparation", "Continuous learning track"]
     }
   ];
 

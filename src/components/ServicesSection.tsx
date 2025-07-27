@@ -76,17 +76,17 @@ const ServicesSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            What We <span className="text-primary">Offer</span>
+            What We <span className="text-primary">Will Offer</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive facilities and programs designed to accelerate agricultural innovation 
-            and sustainable food system development.
+            Comprehensive facilities and programs being designed to accelerate agricultural innovation 
+            and sustainable food system development. Join us in shaping these offerings.
           </p>
         </div>
 
         {/* Greenhouse Facilities */}
         <div className="mb-20">
-          <h3 className="text-3xl font-bold text-center mb-12">Greenhouse Facilities</h3>
+          <h3 className="text-3xl font-bold text-center mb-12">Planned Greenhouse Facilities</h3>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {facilities.map((facility, index) => (
               <Card key={index} className="nature-card group hover:scale-105 transition-transform duration-300">
