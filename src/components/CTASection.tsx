@@ -95,26 +95,6 @@ const CTASection = () => {
                     <p className="text-muted-foreground">Tabuk, Saudi Arabia</p>
                   </div>
                 </div>
-                
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mr-4">
-                    <Mail className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Email</h4>
-                    <p className="text-muted-foreground">info@ibtikar.sa</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-primary-light to-accent rounded-lg flex items-center justify-center mr-4">
-                    <Phone className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Phone</h4>
-                    <p className="text-muted-foreground">+966 XXX XXX XXXX</p>
-                  </div>
-                </div>
               </div>
             </div>
 

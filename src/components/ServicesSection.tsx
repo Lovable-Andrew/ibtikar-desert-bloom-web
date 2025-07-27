@@ -45,20 +45,20 @@ const ServicesSection = () => {
   const services = [
     {
       icon: FlaskConical,
-      title: "Research Laboratories",
-      description: "State-of-the-art labs for plant breeding, soil science, pest management, and agricultural biotechnology research.",
+      title: "Research & Development Hub",
+      description: "Advanced laboratories planned for plant breeding, soil science, pest management, and agricultural biotechnology innovation.",
       image: researchLabImage
     },
     {
       icon: GraduationCap,
-      title: "Training Programs",
-      description: "Comprehensive educational programs for farmers, researchers, and agri-tech professionals.",
+      title: "Knowledge Transfer Center",
+      description: "Comprehensive education and training programs designed for farmers, researchers, and agri-tech professionals.",
       image: trainingProgramsImage
     },
     {
       icon: Users,
-      title: "Co-working Spaces",
-      description: "Collaborative workspaces for startups, researchers, and industry professionals to innovate together.",
+      title: "Innovation Incubator",
+      description: "Dedicated spaces for startups, researchers, and industry professionals to collaborate and develop breakthrough solutions.",
       image: coworkingSpaceImage
     }
   ];
@@ -118,16 +118,16 @@ const ServicesSection = () => {
           <div className="relative rounded-2xl overflow-hidden">
             <img 
               src={greenhouseTypesImage} 
-              alt="Different greenhouse technology levels"
+              alt="Planned greenhouse facilities showcasing high-tech, mid-tech, and low-tech agricultural solutions for arid regions"
               className="w-full h-64 md:h-80 object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20"></div>
           </div>
         </div>
 
-        {/* Additional Services */}
+        {/* Core Programs */}
         <div className="mb-20">
-          <h3 className="text-3xl font-bold text-center mb-12">Additional Services</h3>
+          <h3 className="text-3xl font-bold text-center mb-12">Core Programs</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Card key={index} className="nature-card">
@@ -135,7 +135,7 @@ const ServicesSection = () => {
                   {service.image && (
                     <img 
                       src={service.image} 
-                      alt={service.title}
+                      alt={`${service.title} - Modern agricultural innovation facility planned for Ibtikar center`}
                       className="w-full h-40 object-cover rounded-lg mb-4"
                     />
                   )}
